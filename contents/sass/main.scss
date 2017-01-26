@@ -1,9 +1,56 @@
-.box {
-	height: 100px;
-	width: 100px;
-	background: blue;
-}
-
 body {
 	margin: 0;
+	padding: 0;
+}
+
+/// Container
+.topbar-container {
+	background-color: #fff;
+	border-bottom: 1px solid #e6e6e6;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.topbar-logo {
+	order: 1;
+	background: pink;
+	padding: 0.5em;
+
+	a {
+		font-size: 1.5em;
+		text-decoration: none;
+	}
+
+	@media screen and (max-width: 800px) {
+		flex: 1 1 100%;
+	}
+}
+
+.topbar-menu {
+	order: 2;
+
+	display: flex;
+	flex-flow: row nowrap;
+
+	a {
+		padding: 15px 20px;
+		font-size: 1em;
+		text-decoration: none;
+		border-right: 1px solid #e6e6e6;
+
+		&:focus,
+		&:hover {
+			background-color: #eee;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		flex-flow: column nowrap;
+		width: 100%;
+		a {
+			text-align: center;
+			border-bottom: 1px solid #e6e6e6;
+		}
+	}
 }
