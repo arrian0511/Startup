@@ -4,8 +4,7 @@
 		<a href="#"> Logo</a>
 	</div>
 
-	<!--Menu Items-->
-	<div class="topbar-menu">
+	<div #menuToggle class="topbar-menu">
 		<a href="#">
 			Employee
 		</a>
@@ -21,5 +20,12 @@
 		<a href="#">
 			Contact
 		</a>
-	</div>	
+	</div>
+
+	<div class="topbar-user">
+		<button type="button" class="topbar-button" (click)="OnClickToggleBtn()">
+			<span>☰</span>
+		</button>
+		<a href="#">Login</a>
+	</div>
 </div>
